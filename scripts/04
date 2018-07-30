@@ -1,0 +1,5 @@
+# SCRIPTS - 04
+# Q: Réalisez un script qui permet de surveiller les modifications du fichier
+#    /etc/crontab et envoie un mail à root si celui-ci a été modifié. 
+#    Créez une tache plannifiée pour ce script tous les jours à minuit.
+# R: Script

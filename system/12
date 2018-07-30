@@ -1,0 +1,4 @@
+# SYSTEM - 12 (sur VM Debian)
+# Q: Déterminez la taille exacte de chaque dossier de /var d’une manière
+#    humainement compréhensible, suivi du chemin de celui-ci.
+# R: Commande
