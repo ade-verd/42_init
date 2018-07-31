@@ -1,3 +1,5 @@
 # SYSTEM - 01 (sur VM Debian)
 # Q: Dans quel fichier se trouve la version installée de votre Debian ?
 # R: Réponse écrite
+
+/etc/debian_version

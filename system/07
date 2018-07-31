@@ -1,3 +1,5 @@
 # SYSTEM - 07 (sur VM Debian)
 # Q: Déterminez le PID du service SSHD
 # R: Commande
+
+service ssh status | grep "Main PID" | awk '{print $3}'

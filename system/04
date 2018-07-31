@@ -2,3 +2,5 @@
 # Q: Quelle commande donne le temps depuis lequel votre système a été démarré la
 #    dernière fois ?
 # R: Commande
+
+uptime

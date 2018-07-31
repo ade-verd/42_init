@@ -1,3 +1,11 @@
 # SYSTEM - 19 (sur VM Debian)
 # Q: Avec la commande précédente, interdisez le reste des IP
 # R: Commande
+
+iptables -P INPUT DROP
+iptables -P OUTPUT DROP
+
+# man iptables
+# -P, --policy chain target
+              Set  the  policy for the built-in (non-user-defined) chain to the given target.  The policy
+              target must be either ACCEPT or DROP.

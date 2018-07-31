@@ -1,3 +1,5 @@
 # SYSTEM - 14 (sur VM Debian)
 # Q: Lancez en background la commande tail -f /var/log/syslog
 # R: Commande
+
+tail -f /var/log/syslog &

@@ -1,3 +1,5 @@
 # SYSTEM - 10 (sur VM Debian)
 # Q: Quelle commande permet de lister les tables de partitions des disques ?
 # R: Commande
+
+fdisk -l

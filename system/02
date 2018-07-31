@@ -1,3 +1,7 @@
 # SYSTEM - 02 (sur VM Debian)
 # Q: Quelle commande permet de renommer votre système ?
 # R: Commande
+
+hostname newname
+
+# hostname

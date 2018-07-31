@@ -2,3 +2,7 @@
 # Q: Trouvez une commande qui permet, en temps réel, de trouver les processus
 #    en cours d’exécution
 # R: Commande
+
+top
+
+# Pour un instant t, on pourrait utiliser ps -axu

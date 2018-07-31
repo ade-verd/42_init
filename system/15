@@ -2,3 +2,7 @@
 # Q: Trouvez une commande qui permet de tuer le processus de la commande en
 #    background
 # R: Commande
+
+ pkill -KILL tail
+#or
+ kill -s SIGKILL $(pidof tail)
