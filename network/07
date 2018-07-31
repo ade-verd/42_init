@@ -2,3 +2,10 @@
 # Q: Interrogez un serveur DNS externe sur le nom de domaine slash16.org 
      (ex :google 8.8.8.8)
 # R: Commande
+
+#Linux
+ nslookup slash16.org 8.8.8.8
+
+#Darwin
+ 
+#nslookup - query Internet name servers interactively

@@ -1,3 +1,9 @@
 # NETWORK - 02
 # Q: Identifiez et affichez les caractéristiques de l’interface Ethernet
 # R: Commande
+
+#Linux
+ ifconfig -a | sed -n /\[eE\]th/,/^$/p | grep .
+
+#Darwin
+ 

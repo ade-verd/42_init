@@ -1,3 +1,9 @@
 # NETWORK - 04
 # Q: Identifiez la gateway par défaut dans la table de routage
 # R: Commande
+
+#Linux
+ route -n | grep "^0.0.0.0" | awk '{print $2}'
+
+#Darwin
+ 

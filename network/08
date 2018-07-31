@@ -1,3 +1,7 @@
 # NETWORK - 08
 # Q: Trouvez chez quel hébergeur est le site de Slash16
 # R: Réponse écrite
+
+whois slash16.org | grep Name
+
+# AWS : Amazon Web Services

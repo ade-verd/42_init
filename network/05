@@ -2,3 +2,15 @@
 # Q: Identifiez l’IP du serveur DNS qui répond sur le domaine suivant :
 #    slash16.org 
 # R: Commande
+
+#Linux
+ dig +short slash16.org
+#or
+ dig slash16.org | grep ^slash16.org | awk '{print $5}'
+#or
+ nslookup slash16.org | grep Address | awk '{print $2}' | sed 1d
+
+#Darwin
+ 
+#dig - DNS lookup utility
+#nslookup - query Internet name servers interactively

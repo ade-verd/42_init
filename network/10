@@ -2,3 +2,7 @@
 # Q: Identifiez les différents appareils réseaux entre votre poste et
 #    le domaine slash16.org
 # R: Commande
+
+traceroute slash16.org
+
+#traceroute - print the route packets trace to network host

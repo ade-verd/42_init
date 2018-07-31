@@ -1,3 +1,7 @@
 # NETWORK - 14
 # Q: Quel est le fichier contenant les entrées locales DNS ?
 # R: Réponse écrite
+
+/etc/hosts
+
+# man hosts(5) - static table lookup for hostnames

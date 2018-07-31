@@ -2,3 +2,11 @@
 # Q: Récupérez la liste des interfaces réseau de la machine sans affcher aucun détail
 #    pour ces interfaces. Vraiment juste la liste des noms.
 # R: Commande
+
+#Linux
+ ifconfig -a | cut -d " "  -f 1 | grep .
+#or
+ ls /sys/class/net
+
+#Darwin
+ ifconfig -l
