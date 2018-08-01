@@ -3,4 +3,4 @@
 #    humainement compréhensible, suivi du chemin de celui-ci.
 # R: Commande
 
-du -h /var/*
+du -h -d1 /var

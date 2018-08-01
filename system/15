@@ -5,4 +5,4 @@
 
  pkill -KILL tail
 #or
- kill -s SIGKILL $(pidof tail)
+# kill -s SIGKILL $(pidof tail)

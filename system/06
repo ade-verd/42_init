@@ -2,6 +2,9 @@
 # Q: Donnez une commande pour redémarrer le service SSH
 # R: Commande
 
-service ssh restart
+systemctl restart ssh.service 
 
-# verify with: service ssh status | grep since
+#or 
+# service ssh restart
+# verify with: 	service ssh status | grep since
+# or: 			systemctl status ssh.service | grep since

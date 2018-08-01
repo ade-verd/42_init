@@ -6,4 +6,4 @@
 ~/.ssh/authorized_keys
 ~/.ssh/authorized_keys2
 
-# modifiable via le fichier /etc/ssh/sshd_config #AuthorizedKeyFile
+# modifiable via le fichier /etc/ssh/sshd_config #AuthorizedKeysFile

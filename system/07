@@ -2,4 +2,7 @@
 # Q: Déterminez le PID du service SSHD
 # R: Commande
 
-service ssh status | grep "Main PID" | awk '{print $3}'
+systemctl status ssh.service | grep "Main PID" | awk '{print $3}'
+
+#or
+# service ssh status | grep "Main PID" | awk '{print $3}'
