@@ -6,4 +6,4 @@
  networksetup -getinfo Wi-Fi | grep Wi-Fi | awk '{print $3}' 
 
 #Linux
- ifconfig -a | grep HWaddr | rev | cut -d \t -f 1 | rev | sed 's\HWaddr\ \' | tr -d ' '
+# ifconfig -a | grep HWaddr | rev | cut -d \t -f 1 | rev | sed 's\HWaddr\ \' | tr -d ' '

@@ -2,7 +2,7 @@
 # Q: Identifiez et affichez les caractéristiques de l’interface Ethernet
 # R: Commande
 
- networksetup -getinfo Ethernet
+networksetup -getinfo Ethernet
 
 # networksetup
 # configuration tool for network settings in System Preferences. 
