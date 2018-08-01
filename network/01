@@ -3,10 +3,10 @@
 #    pour ces interfaces. Vraiment juste la liste des noms.
 # R: Commande
 
+#Darwin
+ ifconfig -l
+
 #Linux
  ifconfig -a | cut -d " "  -f 1 | grep .
 #or
  ls /sys/class/net
-
-#Darwin
- ifconfig -l

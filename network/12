@@ -3,4 +3,4 @@
 #    votre poste
 # R: Commande
 
-ping 10.51.1.253
+ping -o 10.51.1.253

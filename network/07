@@ -3,9 +3,6 @@
      (ex :google 8.8.8.8)
 # R: Commande
 
-#Linux
- nslookup slash16.org 8.8.8.8
-
-#Darwin
+nslookup slash16.org 8.8.8.8
  
 #nslookup - query Internet name servers interactively

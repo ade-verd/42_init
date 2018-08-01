@@ -3,10 +3,6 @@
 #    serveur DNS que vous utilisez
 # R: Réponse écrite
 
-#Linux
- /etc/resolv.conf
-
-#Darwin
- 
+/etc/resolv.conf
 
 # man resolv.conf(5) - resolver configuration file
