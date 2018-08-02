@@ -1,4 +1,6 @@
 # SCRIPTS - 01
 # Q: Réalisez un script qui affiche seulement le login, le UID et le Path de
 #    chaque entrée du fichier /etc/passwd
-# R: Script
+# R: Scriptcat /etc/passwd | awk '{split(-bash, a,:); print a[1]:a[3]:a[7]}'
+
+cat /etc/passwd | awk '{split($0, a,":"); print a[1]":"a[3]":"a[7]}'
