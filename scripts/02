@@ -4,3 +4,12 @@
 #    /var/log/update_script.log. Créez une tache plannifiée pour ce script
 #    une fois par semaine à 4h00 du matin.
 # R: Script
+
+#!/bin/bash
+NOW=$(date)
+LOGFILE="/var/log/update_script.log"
+
+touch $LOGFILE && chmod 755 $LOGFILE
+echo -e "---------------------------\n"$NOW"\n---------------------------" >> $LOGFILE 2>&1
+echo "apt-get update -y" && sudo apt-get update -y >> $LOGFILE 2>&1
+
