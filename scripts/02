@@ -6,14 +6,15 @@
 # R: Script
 
 #!/bin/bash
-
 LOGFILE="/var/log/update_script.log"
 SCRIPT=$(pwd)"/aptget_update.sh"
 
+sudo touch $LOGFILE > /dev/null 2>&1
+sudo chmod 666 $LOGFILE
 echo "echo ---------------------------- >> $LOGFILE 2>&1" > $SCRIPT
 echo "echo \$(TZ='Europe/Paris' date) >> $LOGFILE 2>&1" >> $SCRIPT
 echo "echo ---------------------------- >> $LOGFILE 2>&1" >> $SCRIPT
-echo "apt-get update -y >> $LOGFILE 2>&1" >> $SCRIPT
+echo "sudo apt-get update -y >> $LOGFILE 2>&1" >> $SCRIPT
 
 chmod 755 $SCRIPT
 echo "0 4 * * 1" $SCRIPT | crontab
