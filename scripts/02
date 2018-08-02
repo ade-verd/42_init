@@ -6,10 +6,21 @@
 # R: Script
 
 #!/bin/bash
-NOW=$(date)
+
 LOGFILE="/var/log/update_script.log"
+SCRIPT=$(pwd)"/aptget_update.sh"
 
-touch $LOGFILE && chmod 755 $LOGFILE
-echo -e "---------------------------\n"$NOW"\n---------------------------" >> $LOGFILE 2>&1
-echo "apt-get update -y" && sudo apt-get update -y >> $LOGFILE 2>&1
+echo "echo ---------------------------- >> $LOGFILE 2>&1" > $SCRIPT
+echo "echo \$(TZ='Europe/Paris' date) >> $LOGFILE 2>&1" >> $SCRIPT
+echo "echo ---------------------------- >> $LOGFILE 2>&1" >> $SCRIPT
+echo "apt-get update -y >> $LOGFILE 2>&1" >> $SCRIPT
 
+chmod 755 $SCRIPT
+echo "0 4 * * 1" $SCRIPT | crontab
+
+echo "crontab -l" && crontab -l
+echo "| | | | +----- Day of week (0-7)"
+echo "| | | +------- Month (1 - 12)"
+echo "| | +--------- Day of month (1 - 31)"
+echo "| +----------- Hour (0 - 23)"
+echo "+------------- Min (0 - 59)"

@@ -4,4 +4,5 @@
 # R: Scriptcat /etc/passwd | awk '{split(-bash, a,:); print a[1]:a[3]:a[7]}'
 
 #!/bin/bash
+
 cat /etc/passwd | awk '{split($0, a,":"); print a[1]":"a[3]":"a[7]}'
