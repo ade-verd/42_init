@@ -2,3 +2,10 @@
 # Q: Réalisez un script qui affiche la liste des fichiers triés par taille
 #    présents dans le dossier passé en argument
 # R: Script
+
+#!/bin/bash
+
+for ARG in "$@"
+	do
+		ls -lS "$ARG"
+done

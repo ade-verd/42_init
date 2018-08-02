@@ -6,6 +6,7 @@
 # R: Script
 
 #!/bin/bash
+
 LOGFILE="/var/log/update_script.log"
 SCRIPT=$(pwd)"/aptget_update.sh"
 
