@@ -3,3 +3,19 @@
 #    /etc/crontab et envoie un mail à root si celui-ci a été modifié. 
 #    Créez une tache plannifiée pour ce script tous les jours à minuit.
 # R: Script
+
+#!/bin/bash
+
+FILE2WATCH="/etc/crontab"
+MD5=$(pwd)"/crontab.md5"
+SCRIPT=$(pwd)"/04"
+
+md5sum $FILE2WATCH > $MD5
+
+if (test md5sum --check $MD5 | grep "FAILED" > 0)
+	then
+# mail
+fi
+
+# echo "0 0 * * *" $SCRIPT | crontab
+# echo "* * * * *" $SCRIPT | crontab
