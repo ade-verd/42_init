@@ -7,15 +7,30 @@
 #!/bin/bash
 
 FILE2WATCH="/etc/crontab"
-MD5=$(pwd)"/crontab.md5"
-SCRIPT=$(pwd)"/04"
+MD5="/tmp/crontab.md5"
+MAIL_TMP="/tmp/mail_template.txt"
+SCRIPT_INIT=$(pwd)"/04"
+SCRIPT="~/04"
 
-md5sum $FILE2WATCH > $MD5
-
-if (test md5sum --check $MD5 | grep "FAILED" > 0)
+if [ ! -f $MD5 ]
 	then
-# mail
+	cp $SCRIPT_INIT ~/
+	md5sum $FILE2WATCH > $MD5
 fi
 
-# echo "0 0 * * *" $SCRIPT | crontab
-# echo "* * * * *" $SCRIPT | crontab
+echo "0 0 * * *" $SCRIPT | crontab
+
+cat > $MAIL_TMP << EOM
+Subject: $FILE2WATCH has been modified
+The file $FILE2WATCH has been modified.
+Old MD5: $(cat $MD5)
+New MD5: $(md5sum $FILE2WATCH)
+EOM
+
+if [ $(md5sum --check $MD5 | grep -c FAILED) -ne 0 ]
+	then
+		mail root < $MAIL_TMP
+		md5sum $FILE2WATCH > $MD5
+fi
+
+# mails are located in /var/mail/
