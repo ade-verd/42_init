@@ -17,7 +17,7 @@ cat > $SCRIPT << EOM
 echo ---------------------------- >> $LOGFILE 2>&1
 echo \$(TZ='Europe/Paris' date) >> $LOGFILE 2>&1
 echo ---------------------------- >> $LOGFILE 2>&1
-sudo apt-get update -y >> $LOGFILE 2>&1
+sudo apt-get update -y && apt-get upgrade -y >> $LOGFILE 2>&1
 EOM
 
 chmod 755 $SCRIPT
